@@ -1,0 +1,11 @@
+<Hangar>
+    <item>
+        <brand>Boeing</brand>
+        <model>747</model>
+        <weight>30000.0</weight>
+        <numberOfEngines>4</numberOfEngines>
+        <isJet>true</isJet>
+        <productionYear>2022</productionYear>
+        <price>100000000.0</price>
+    </item>
+</Hangar>

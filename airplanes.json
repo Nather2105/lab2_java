@@ -1,0 +1,29 @@
+[
+  {
+    "numberOfEngines": 4,
+    "isJet": true,
+    "brand": "Boeing",
+    "model": "747",
+    "weight": 30000.0,
+    "productionYear": 2022,
+    "price": 1.0E8
+  },
+  {
+    "numberOfEngines": 4,
+    "isJet": true,
+    "brand": "Airbus",
+    "model": "A380",
+    "weight": 50000.0,
+    "productionYear": 2022,
+    "price": 1.5E8
+  },
+  {
+    "numberOfEngines": 2,
+    "isJet": false,
+    "brand": "Embraer",
+    "model": "E190",
+    "weight": 20000.0,
+    "productionYear": 2021,
+    "price": 5.0E7
+  }
+]
