@@ -11,7 +11,7 @@ public class JsonSerializationFormatTest {
     @Test(expectedExceptions = IllegalArgumentException.class)
     public void testSerializationInvalidObject() {
         // Створюємо об'єкт Airplane для тестування
-        Airplane airplane = new Airplane.Builder("Boeing", "747", 30000.0)
+        Airplane airplane = (Airplane) new Airplane.Builder("Boeing", "747", 30000.0)
                 .setNumberOfEngines(4)
                 .setJet(true)
                 .setProductionYear(2022)
@@ -26,7 +26,7 @@ public class JsonSerializationFormatTest {
     @Test
     public void testSerializationDeserialization() {
         // Створюємо об'єкт Airplane для тестування
-        Airplane airplane = new Airplane.Builder("Boeing", "747", 30000.0)
+        Airplane airplane = (Airplane) new Airplane.Builder("Boeing", "747", 30000.0)
                 .setNumberOfEngines(4)
                 .setJet(true)
                 .setProductionYear(2022)
@@ -49,19 +49,19 @@ public class JsonSerializationFormatTest {
         List<Airplane> airplanes = new ArrayList<>();
 
         // Додаємо об'єкти літаків для тестування
-        airplanes.add(new Airplane.Builder("Boeing", "747", 30000.0)
+        airplanes.add((Airplane) new Airplane.Builder("Boeing", "747", 30000.0)
                 .setNumberOfEngines(4)
                 .setJet(true)
                 .setProductionYear(2022)
                 .setPrice(100000000.0)
                 .build());
-        airplanes.add(new Airplane.Builder("Airbus", "A380", 50000.0)
+        airplanes.add((Airplane) new Airplane.Builder("Airbus", "A380", 50000.0)
                 .setNumberOfEngines(4)
                 .setJet(true)
                 .setProductionYear(2022)
                 .setPrice(150000000.0)
                 .build());
-        airplanes.add(new Airplane.Builder("Embraer", "E190", 20000.0)
+        airplanes.add((Airplane) new Airplane.Builder("Embraer", "E190", 20000.0)
                 .setNumberOfEngines(2)
                 .setJet(false)
                 .setProductionYear(2021)

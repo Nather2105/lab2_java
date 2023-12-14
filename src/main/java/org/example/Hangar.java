@@ -13,12 +13,12 @@ public class Hangar {
         this.capacity = capacity;
     }
 
-    public void addAirplane(Airplane airplane) {
+    public void addAirplane(Airplane airplane, LocalDate localDate) {
         if (airplaneMap.size() >= capacity) {
             throw new IllegalArgumentException("The hangar is full. Cannot add more airplanes.");
         }
 
-        airplaneMap.put(airplane, LocalDate.now());
+        airplaneMap.put(airplane, localDate);
     }
 
     public void removeAirplane(Airplane airplane) {

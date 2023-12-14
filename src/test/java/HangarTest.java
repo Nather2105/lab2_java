@@ -29,8 +29,8 @@ public class HangarTest {
                 .build();
 
         // Add airplanes to the hangar
-        hangar.addAirplane(airplane1);
-        hangar.addAirplane(airplane2);
+        hangar.addAirplane(airplane1, LocalDate.of(2021, 3, 1));
+        hangar.addAirplane(airplane2, LocalDate.of(2021, 3, 1));
 
         // Check if the airplanes were added successfully
         Map<Airplane, LocalDate> airplanesInfo = hangar.getInformation();
@@ -46,7 +46,7 @@ public class HangarTest {
                 .build();
 
         // Add the airplane to the hangar
-        hangar.addAirplane(airplane);
+        hangar.addAirplane(airplane, LocalDate.of(2021, 3, 1));
 
         // Remove the airplane from the hangar
         hangar.removeAirplane(airplane);
@@ -73,9 +73,9 @@ public class HangarTest {
                 .build();
 
         // Add airplanes to the hangar (hangar capacity is 2, so the third airplane should throw an exception)
-        hangar.addAirplane(airplane1);
-        hangar.addAirplane(airplane2);
-        hangar.addAirplane(airplane3);
+        hangar.addAirplane(airplane1, LocalDate.of(2021, 3, 1));
+        hangar.addAirplane(airplane2, LocalDate.of(2021, 3, 1));
+        hangar.addAirplane(airplane3, LocalDate.of(2021, 3, 1));
     }
 
     @Test(expectedExceptions = IllegalArgumentException.class)

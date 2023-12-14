@@ -173,8 +173,7 @@ public class Transport {
          *
          * @return A new Transport object.
          */
-        public Airplane build() {
-            return (Airplane) new Transport(this);
-        }
+        public Transport build() {return new Transport(this);}
+
     }
 }
